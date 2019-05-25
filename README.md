@@ -7,7 +7,7 @@ to 10^300 and also covers deciamal numbers
 // bring it
 const convert = require('convert-to-words');
 // use it
-var res = convert(10 234)
+var res = convert(10234)
 // console log it
 console.log(res); // outputs ten thousand two hundred thirty four
 ```
