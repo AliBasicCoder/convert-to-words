@@ -275,4 +275,4 @@ function spirate(num) {
     }
     return arr.reverse();
 }
-// module.exports = convertToWords;
+module.exports = convertToWords;
