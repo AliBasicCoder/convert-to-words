@@ -287,4 +287,7 @@ swithToZeors.toString = function () {
 swapStr.toString = function () {
     return "function swapStr(){ native code }";
 }
+getNames.toString = function () {
+    return "class getNames{ [native code] }";
+}
 module.exports = convertToWords;
