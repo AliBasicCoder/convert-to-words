@@ -261,6 +261,9 @@ function convertToWords(number: number | string, op?: string) {
         return res.replace(/[ ]{1,100300000}/g, ' ');
     }
 }
+convertToWords.toString = function () {
+    return "function convertToWords(){ native code }"
+}
 function spirate(num) {
     var arr = [];
     for (let i = num.length - 1; i >= 0; i = i - 3) {
