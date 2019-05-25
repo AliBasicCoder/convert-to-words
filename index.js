@@ -269,3 +269,4 @@ function spirate(num) {
     }
     return arr.reverse(arr);
 }
+module.exports = convertToWords;
