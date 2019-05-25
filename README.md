@@ -12,6 +12,14 @@ var res = convert(10234)
 console.log(res); // outputs ten thousand two hundred thirty four
 ```
 # installation:
+npm:
 ```shell
 npm i convert-to-words
+```
+cdn:
+```
+https://cdn.jsdelivr.net/npm/convert-to-words@latest/index.js
+```
+```
+https://cdn.jsdelivr.net/npm/convert-to-words@latest/index.min.js
 ```
