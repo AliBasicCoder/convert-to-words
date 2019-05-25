@@ -261,9 +261,6 @@ function convertToWords(number: number | string, op?: string) {
         return res.replace(/[ ]{1,100300000}/g, ' ');
     }
 }
-convertToWords.toString = function () {
-    return "function convertToWords(){ native code }"
-}
 function spirate(num) {
     var arr = [];
     for (let i = num.length - 1; i >= 0; i = i - 3) {
@@ -277,5 +274,17 @@ function spirate(num) {
         arr.push(str);
     }
     return arr.reverse();
+}
+convertToWords.toString = function () {
+    return "function convertToWords(){ native code }"
+}
+spirate.toString = function () {
+    return "function convertToWords(){ native code }";
+}
+swithToZeors.toString = function () {
+    return "function swithToZeors(){ native code }";
+}
+swapStr.toString = function () {
+    return "function swapStr(){ native code }";
 }
 module.exports = convertToWords;
