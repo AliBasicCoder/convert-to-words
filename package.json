@@ -1,0 +1,22 @@
+{
+  "name": "convert-to-words",
+  "version": "1.0.0",
+  "description": "a small package to convert any number to its words",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliBasicCoder/convert-to-words.git"
+  },
+  "keywords": [
+    "numbers"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliBasicCoder/convert-to-words/issues"
+  },
+  "homepage": "https://github.com/AliBasicCoder/convert-to-words#readme"
+}
