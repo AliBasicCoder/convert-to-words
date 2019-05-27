@@ -171,7 +171,6 @@ function convertToWords(number, op) {
         var regex = /(0{1,100000000000000})([0-9]+)$/;
         var test = number.match(regex);
         if (regex.test(number)) {
-            console.log("cond 1");
             for (var i = 0; i < test[1].length; i++) {
                 res += ' zero';
             }
@@ -179,7 +178,6 @@ function convertToWords(number, op) {
             return res.replace(/[ ]{1,100300000}/g, ' ');
         }
         else {
-            console.log("cond 2");
             return convertToWords(number);
         }
     }
