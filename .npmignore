@@ -1,2 +1,4 @@
-minify.js
 *.html
+minify.js
+index.min.js
+index.ts

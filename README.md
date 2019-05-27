@@ -18,8 +18,5 @@ npm i convert-to-words
 ```
 cdn:
 ```
-https://cdn.jsdelivr.net/npm/convert-to-words@latest/index.js
-```
-```
 https://cdn.jsdelivr.net/npm/convert-to-words@latest/index.min.js
 ```

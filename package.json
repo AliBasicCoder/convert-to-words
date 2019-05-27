@@ -1,6 +1,6 @@
 {
   "name": "convert-to-words",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "a small package to convert any number to its words",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,5 @@
   },
   "homepage": "https://github.com/AliBasicCoder/convert-to-words#readme",
   "devDependencies": {},
-  "dependencies": {
-    "@types/node": "^12.0.2"
-  }
+  "dependencies": {}
 }
