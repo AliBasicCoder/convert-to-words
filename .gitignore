@@ -1,3 +1,5 @@
 node_modules
-*.js
+minify.js
+index.js
+index.min.js
 try.html
