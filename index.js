@@ -1,4 +1,4 @@
-/*MIT License
+/* MIT License
 * 
 * Copyright (c) 2019 AliBasicCoder
 * 
@@ -28,30 +28,29 @@ function swapStr(str, first, last) {
     return arr.join('');
 }
 function swithToZeors(number) {
-    var number = String(number);
     var regex = /e\+([0-9]{2,3})/;
-    if (!regex.test(number)) return number;
+    if (!regex.test(number))
+        return number;
     var res = number.match(regex);
     var numRegex = /([0-9]*)(\.e\+[0-9]{2,3})/;
     var num = number.substring(0, res['index']);
-    for (i = Number(res[1]); i > 0; i--) {
-
+    for (var i = Number(res[1]); i > 0; i--) {
         if (number.indexOf(".") != -1 && !(numRegex.test(number))) {
             var index = number.indexOf(".");
             number = swapStr(number, index, index + 1);
             number = number.substring(0, res['index']);
-            number += `e+${i}`;
+            number += "e+" + i;
         }
         if (numRegex.test(number)) {
-            for (let y = i; i <= y; y--) {
+            for (var y = i; i <= y; y--) {
                 num += '0';
             }
         }
     }
     return num.replace(".", '');
 }
-class getNames {
-    constructor(arr) {
+var getNames = /** @class */ (function () {
+    function getNames(arr) {
         this.names = [
             ' thousand',
             ' million',
@@ -146,105 +145,138 @@ class getNames {
             ' sexnonagintillion',
             ' septennonagintillion',
             ' octanonagintillion',
-            ' novemnonagintillion'];
+            ' novemnonagintillion'
+        ];
         this.getCalled = 0;
         this.arrLenght = arr.length - 1;
         this.index = this.arrLenght;
     }
-    get() {
+    getNames.prototype.get = function () {
         this.getCalled++;
         if (this.getCalled === (this.arrLenght + 1)) {
             return undefined;
         }
         this.index--;
         return this.names[this.index];
-    }
-}
-function convertToWords(number,op) {
+    };
+    return getNames;
+}());
+function convertToWords(number, op) {
     //number = Number(number);
     if (number === NaN) {
         return NaN;
     }
-    if(op === 'dec'){
+    if (op === 'dec') {
         var res = '';
-        var regex = /(0{1,100000000000000})(\d*)$/;
+        var regex = /(0{1,100000000000000})([0-9]+)$/;
         var test = number.match(regex);
-        if(regex.test(number)){
+        if (regex.test(number)) {
+            console.log("cond 1");
             for (var i = 0; i < test[1].length; i++) {
-                res += ' zero'
+                res += ' zero';
             }
-            res += ` ${convertToWords(test[2])}`
+            res += " " + convertToWords(test[2]);
             return res.replace(/[ ]{1,100300000}/g, ' ');
         }
+        else {
+            console.log("cond 2");
+            return convertToWords(number);
+        }
     }
-    if (Number(number) >= 0 && Number(number) < 1000) number = Number(number);
-    if (number === 0) return 'zero'
-    if (number === 1) return 'one'
-    if (number === 2) return 'two'
-    if (number === 3) return 'three'
-    if (number === 4) return 'four'
-    if (number === 5) return 'five'
-    if (number === 6) return 'six'
-    if (number === 7) return 'seven'
-    if (number === 8) return 'eight'
-    if (number === 9) return 'nine'
-    if (number === 10) return 'ten'
-    if (number === 11) return 'eleven'
-    if (number === 12) return 'tewlve'
-    if (number === 13) return 'thirteen'
-    if (number === 14) return 'fourteen'
-    if (number === 15) return 'fifteen'
-    if (number === 16) return 'sixteen'
-    if (number === 17) return 'seventeen'
-    if (number === 18) return 'eighteen'
-    if (number === 19) return 'nineteen'
-    if (number === 20) return 'twenty'
-    if (number === 30) return 'thirty'
-    if (number === 40) return 'fourty'
-    if (number === 50) return 'fifty'
-    if (number === 60) return 'sixty'
-    if (number === 70) return 'seventy'
-    if (number === 80) return 'eighty'
-    if (number === 90) return 'ninety'
-    
+    if (Number(number) >= 0 && Number(number) < 1000)
+        number = Number(number);
+    if (number === 0)
+        return 'zero';
+    if (number === 1)
+        return 'one';
+    if (number === 2)
+        return 'two';
+    if (number === 3)
+        return 'three';
+    if (number === 4)
+        return 'four';
+    if (number === 5)
+        return 'five';
+    if (number === 6)
+        return 'six';
+    if (number === 7)
+        return 'seven';
+    if (number === 8)
+        return 'eight';
+    if (number === 9)
+        return 'nine';
+    if (number === 10)
+        return 'ten';
+    if (number === 11)
+        return 'eleven';
+    if (number === 12)
+        return 'tewlve';
+    if (number === 13)
+        return 'thirteen';
+    if (number === 14)
+        return 'fourteen';
+    if (number === 15)
+        return 'fifteen';
+    if (number === 16)
+        return 'sixteen';
+    if (number === 17)
+        return 'seventeen';
+    if (number === 18)
+        return 'eighteen';
+    if (number === 19)
+        return 'nineteen';
+    if (number === 20)
+        return 'twenty';
+    if (number === 30)
+        return 'thirty';
+    if (number === 40)
+        return 'fourty';
+    if (number === 50)
+        return 'fifty';
+    if (number === 60)
+        return 'sixty';
+    if (number === 70)
+        return 'seventy';
+    if (number === 80)
+        return 'eighty';
+    if (number === 90)
+        return 'ninety';
     if (!Number.isInteger(Number(number))) {
         var num = String(number);
         var index = num.indexOf(".");
         var dec = num.substring(index + 1, num.length);
         var int = num.substring(0, index);
-        var str = `${convertToWords(int)} point ${convertToWords(dec,'dec')}`;
+        var str = convertToWords(int) + " point " + convertToWords(dec, 'dec');
         return str.replace(/[ ]{1,100300000}/g, ' ');
     }
-    
     if (number > 10 && number <= 99 && Number.isInteger(number)) {
         var fd = Math.floor(number / 10);
         var sd = (number - (fd * 10));
-        var str = ` ${convertToWords(fd * 10)} ${convertToWords(sd)}`;
+        var str = " " + convertToWords(fd * 10) + " " + convertToWords(sd);
         return str.replace(/[ ]{1,100300000}/g, ' ');
     }
-    
     if (number >= 100 && number <= 999 && Number.isInteger(number)) {
         var fd = Math.floor(number / 100);
         var rest = (number - (fd * 100));
         if (rest === 0) {
             rest = '';
-        } else {
-            rest = convertToWords(rest)
         }
-        var str = `${convertToWords(fd)} hundred ${rest}`
+        else {
+            rest = convertToWords(rest);
+        }
+        var str = convertToWords(fd) + " hundred " + rest;
         return str.replace(/[ ]{1,1000000}/, ' ');
     }
-    
     if (number >= 1000) {
         // cheking if e exits
         var num = String(number);
         if (String(number).indexOf('e') != -1) {
-            num = swithToZeors(number);
+            num = swithToZeors(String(number));
         }
         var arr = spirate(num);
         var res = '';
         // names
-        arr = arr.filter((thing) => thing !== '');
+        arr = arr.filter(function (thing) { return thing !== ''; });
         var getter = new getNames(arr);
         for (var i = 0; i < arr.length; i++) {
             var nameOfTheNumber = getter.get();
@@ -257,7 +289,7 @@ function convertToWords(number,op) {
 }
 function spirate(num) {
     var arr = [];
-    for (let i = num.length - 1; i >= 0; i = i - 3) {
+    for (var i = num.length - 1; i >= 0; i = i - 3) {
         var str = num[i] + (num[i - 1] || '') + (num[i - 2] || '');
         if (str.length === 2) {
             str = swapStr(str, 1, 0);
@@ -267,6 +299,5 @@ function spirate(num) {
         }
         arr.push(str);
     }
-    return arr.reverse(arr);
+    return arr.reverse();
 }
-module.exports = convertToWords;
