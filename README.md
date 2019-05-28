@@ -1,5 +1,5 @@
 # convert-to-words
-[![npm version](https://img.shields.io/static/v1.svg?label=npm%20version&message=1.2.4&color=green)]
+![npm version](https://img.shields.io/static/v1.svg?label=npm%20version&message=1.2.4&color=green)
 [convert-to-words](https://github.com/AliBasicCoder/convert-to-words/) is a small javaScript TypeScript lib helps you to convert any number up
 to 10^300 and also covers deciamal numbers and
 if its in the numbers you want to convert ar in dome txt you don't
