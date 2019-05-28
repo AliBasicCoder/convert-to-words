@@ -1,7 +1,9 @@
 # convert-to-words
-[convert-to-words](https://github.com/AliBasicCoder/convert-to-words/) is a small js lib helps you to convert any number up
-to 10^300 and also covers deciamal numbers 
-
+[![npm version](https://img.sheild.io/npm/v/reac.svg?style=flat)]
+[convert-to-words](https://github.com/AliBasicCoder/convert-to-words/) is a small javaScript TypeScript lib helps you to convert any number up
+to 10^300 and also covers deciamal numbers and
+if its in the numbers you want to convert ar in dome txt you don't
+want to cahnge it will do that for you be default 
 # example:
 ```js
 // bring it
@@ -10,6 +12,8 @@ const convert = require('convert-to-words');
 var res = convert(10234);
 // console log it
 console.log(res); // outputs ten thousand two hundred thirty four
+var text = convert('i was 20 yr old the last year');
+console.log(text); // outputs i was tewnty yr old the last year
 ```
 # installation:
 npm:
@@ -22,3 +26,15 @@ npm i convert-to-words
 |-------------|-------------------:|-------------:|
 |  lang       | changes the lang the supported languages is English:'en' Spanish:'es'  |   en         |
 | numbersOnly | when it set to true it makes the functions  recieve numbers only               |  false       |
+NOTE: the spanish support still beta how ever it will work fine
+up to 999.999 the full support will come soon
+
+## examples:
+```js
+// bring it
+const convert = require('convert-to-words');
+// use it
+var res = convert(999.999,{lang:'es'});
+// console log it
+console.log(res); // outputs novecientos noveta y nueve comma novecientos noveta y nueve
+```

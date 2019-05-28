@@ -15,6 +15,14 @@ interface options {
 function convertToWords(toConvert: string | number, op?: options) {
     var regexForNumbers = /[0-9]+/g;
     var regexForBinary = /[0-1]+/g;
+    if(typeof toConvert === 'number'){
+        try {
+            var str = convertNums(toConvert, op.lang || null);
+            return str;
+        } catch (err) {
+            throw new Error("numbers Only should be passed in")
+        }
+    }
     if (op) {
         if (op.numbersOnly) {
             try {
