@@ -99,7 +99,6 @@ function convertNumES(number, op?) {
         number = Number(number);
         var fd = Math.floor(number / 100);
         var rest: any = (number - (fd * 100));
-        console.log(fd, rest);
         if (rest === 0) {
             rest = '';
         } else {
@@ -113,7 +112,7 @@ function convertNumES(number, op?) {
         var index = num.indexOf(".");
         var dec = num.substring(index + 1, num.length);
         var int = num.substring(0, index);
-        var str: string = `${convertNumES(int)} point ${convertNumES(dec, 'dec')}`;
+        var str: string = `${convertNumES(int)} comma ${convertNumES(dec, 'dec')}`;
         return str.replace(/[ ]+/g, ' ');
     }
 }

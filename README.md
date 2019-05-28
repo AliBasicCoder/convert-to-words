@@ -7,7 +7,7 @@ to 10^300 and also covers deciamal numbers
 // bring it
 const convert = require('convert-to-words');
 // use it
-var res = convert(10234)
+var res = convert(10234);
 // console log it
 console.log(res); // outputs ten thousand two hundred thirty four
 ```
@@ -16,7 +16,9 @@ npm:
 ```shell
 npm i convert-to-words
 ```
-cdn:
-```
-https://cdn.jsdelivr.net/npm/convert-to-words@latest/index.min.js
-```
+# options:
+
+| option      | default |
+|-------------|--------:|
+|  lang       |   en    |
+| numbersOnly |  false  |
