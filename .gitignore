@@ -1,3 +1,4 @@
 *.js
 ls.txt
 out
+node_modules
