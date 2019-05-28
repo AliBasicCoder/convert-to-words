@@ -1,7 +1,7 @@
 {
   "name": "convert-to-words",
   "version": "1.2.4",
-  "description": "a small package to convert any number to its words",
+  "description": "a small js lib to convert numbers to words",
   "main": "out/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +20,7 @@
     "url": "https://github.com/AliBasicCoder/convert-to-words/issues"
   },
   "homepage": "https://github.com/AliBasicCoder/convert-to-words#readme",
-  "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "@types/node": "^12.0.2"
+  }
 }
