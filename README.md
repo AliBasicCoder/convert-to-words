@@ -1,5 +1,5 @@
 # convert-to-words
-[![npm version](https://img.shields.io/static/v1.svg?label=npm%20version&message=1.2.5&color=green)](https://www.npmjs.com/package/convert-to-words)
+[![npm version](https://img.shields.io/static/v1.svg?label=npm%20version&message=1.2.6&color=green)](https://www.npmjs.com/package/convert-to-words)
 [![LICENSE](https://img.shields.io/static/v1.svg?label=LICENSE&message=MIT&color=green)](https://github.com/AliBasicCoder/convert-to-words/LICENSE)
 
 [convert-to-words](https://github.com/AliBasicCoder/convert-to-words/) is a small javaScript TypeScript lib helps you to convert any number up
