@@ -18,7 +18,8 @@ npm i convert-to-words
 ```
 # options:
 
-| option      | default |
-|-------------|--------:|
-|  lang       |   en    |
-| numbersOnly |  false  |
+| option      |   decription       | default      |
+|-------------|-------------------:|-------------:|
+|  lang       | changes the lang   |   en         |
+| numbersOnly | when it set to true it makes the functions  recieve numbers only               |  false       |
+
