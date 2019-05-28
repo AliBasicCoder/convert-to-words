@@ -1,2 +1,3 @@
-minify.js
-index.min.js
+*.js
+ls.txt
+out

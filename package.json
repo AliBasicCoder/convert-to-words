@@ -1,8 +1,8 @@
 {
   "name": "convert-to-words",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "a small package to convert any number to its words",
-  "main": "index.js",
+  "main": "out/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
