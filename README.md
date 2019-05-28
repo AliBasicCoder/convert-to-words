@@ -20,6 +20,5 @@ npm i convert-to-words
 
 | option      |   decription       | default      |
 |-------------|-------------------:|-------------:|
-|  lang       | changes the lang   |   en         |
+|  lang       | changes the lang the supported languages is English:'en' Spanish:'es'  |   en         |
 | numbersOnly | when it set to true it makes the functions  recieve numbers only               |  false       |
-
