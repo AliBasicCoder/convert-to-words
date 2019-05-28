@@ -1,6 +1,6 @@
 {
   "name": "convert-to-words",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "a small js lib to convert numbers to words",
   "main": "out/index.js",
   "scripts": {
