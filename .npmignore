@@ -1,5 +1,8 @@
-*.html
+out
+langArrs
+BigNumsArrs
+main
+src
+index.ts
 minify.js
-ls.txt
-test
-out-test
+.vscode

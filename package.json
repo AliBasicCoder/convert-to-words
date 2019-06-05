@@ -2,7 +2,7 @@
   "name": "convert-to-words",
   "version": "1.2.8",
   "description": "a small js lib to convert numbers to words",
-  "main": "out/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +13,7 @@
   "keywords": [
     "numbers",
     "Spanish",
+    "English",
     "words"
   ],
   "author": "AliBasicCoder",
@@ -21,7 +22,8 @@
     "url": "https://github.com/AliBasicCoder/convert-to-words/issues"
   },
   "homepage": "https://github.com/AliBasicCoder/convert-to-words#readme",
-  "dependencies": {
-    "@types/node": "^12.0.2"
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^12.0.4"
   }
 }
