@@ -1,4 +1,5 @@
 import BigEnglish from "../BigNumsArrs/english";
+import Spainsh from '../BigNumsArrs/spanish';
 
 export default class getNames {
     names: string[];
@@ -6,8 +7,9 @@ export default class getNames {
     arrLenght: number;
     index: any;
     constructor(arr: any[], lang: string) {
-        if (lang === 'en') {
-            this.names = BigEnglish;
+        this.names = BigEnglish;
+        if (lang === 'es') {
+            this.names = Spainsh;
         }
         this.getCalled = 0;
         this.arrLenght = arr.length - 1;

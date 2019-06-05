@@ -21,7 +21,7 @@ var Spanish = [
     'diecinueve',
     'veinte',
     'veintiuno',
-    'veintidos', // TODO edit the o
+    'veintidós',
     'veintitres',
     'veinticuatro',
     'veinticinco',

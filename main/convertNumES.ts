@@ -3,7 +3,7 @@ import getNames from "../src/getNames";
 import spirate from "../src/spirate";
 import swithToZeors from '../src/swithToZeros';
 
-function convertNumES(number, op?) {
+function convertNumES(number: any, op?: any): String {
     var langArr = Spanish;
     if (op === 'dec') {
         var res = '';
@@ -68,6 +68,7 @@ function convertNumES(number, op?) {
     if (number === 700) return langArr[43];
     if (number === 800) return langArr[44];
     if (number === 900) return langArr[45];
+
     if (number >= 1000) {
         // cheking if e exits
         var num = String(number);
@@ -115,5 +116,6 @@ function convertNumES(number, op?) {
         var str: string = `${convertNumES(int)} comma ${convertNumES(dec, 'dec')}`;
         return str.replace(/[ ]+/g, ' ');
     }
+    return '';
 }
 export default convertNumES;

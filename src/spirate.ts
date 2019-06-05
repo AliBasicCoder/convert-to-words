@@ -1,5 +1,5 @@
 import swapStr from './swapStr';
-function spirate(num) {
+function spirate(num: any) {
     var arr = [];
     for (let i = num.length - 1; i >= 0; i = i - 3) {
         var str = num[i] + (num[i - 1] || '') + (num[i - 2] || '');

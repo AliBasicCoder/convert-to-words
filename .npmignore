@@ -1,3 +1,5 @@
 *.html
 minify.js
 ls.txt
+test
+out-test

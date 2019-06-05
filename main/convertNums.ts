@@ -5,18 +5,11 @@ import swithToZeors from '../src/swithToZeros';
 // langs arr imports
 import English from "../langArrs/englishNumArr";
 import convertNumES from "./convertNumES";
+
 function convertNums(number: number | string, lang?: string, op?: string): any {
-    //number = Number(number);
-    var langArr;
-    var zero;
-    var point;
-    var and;
-    if (!lang || lang === '' || lang === 'en') {
-        lang = 'en'
-        langArr = English;
-        zero = English[0];
-        point = English[28];
-        and = English[29];
+    var langArr: string[] = English;
+    if (!lang) {
+        lang = 'en';
     }
     if (lang === 'es') {
         return convertNumES(number);
@@ -24,14 +17,14 @@ function convertNums(number: number | string, lang?: string, op?: string): any {
     if (op === 'dec') {
         var res = '';
         number = String(number);
-        var regex = /^(0{1,100000000000000})([0-9]+)$/;
+        var regex = /^(0+)([0-9]+)$/;
         var test: any = number.match(regex);
         if (regex.test(number)) {
             for (var i = 0; i < test[1].length; i++) {
-                res += ` ${zero}`;
+                res += ` zero`;
             }
             res += " " + convertNums(test[2]);
-            return res.replace(/[ ]{1,100300000}/g, ' ');
+            return res;
         }
         else {
             return convertNums(number);
@@ -72,16 +65,16 @@ function convertNums(number: number | string, lang?: string, op?: string): any {
         var index = num.indexOf(".");
         var dec = num.substring(index + 1, num.length);
         var int = num.substring(0, index);
-        var str: string = `${convertNums(int, lang || null)} ${point} ${convertNums(dec, lang || null, 'dec')}`;
-        return str.replace(/[ ]+/g, ' ');
+        var str: string = `${convertNums(int, lang)} point ${convertNums(dec, lang, 'dec')}`;
+        return str;
     }
 
     if (number > 10 && number <= 99 && Number.isInteger(Number(number))) {
         number = Number(number);
         var fd = Math.floor(number / 10);
         var sd = (number - (fd * 10));
-        var str: string = ` ${convertNums(fd * 10, lang || null)}${and}${convertNums(sd, lang || null)}`;
-        return str.replace(/[ ]+/g, ' ');
+        var str: string = `${convertNums(fd * 10, lang)}-${convertNums(sd, lang)}`;
+        return str;
     }
 
     if (number >= 100 && number <= 999 && Number.isInteger(Number(number))) {
@@ -91,10 +84,15 @@ function convertNums(number: number | string, lang?: string, op?: string): any {
         if (rest === 0) {
             rest = '';
         } else {
-            rest = convertNums(rest, lang || null)
+            rest = convertNums(rest, lang)
         }
-        var str: string = `${convertNums(fd, lang || null)} ${langArr[30]} ${rest}`
-        return str.replace(/[ ]+/, ' ');
+        var str: string;
+        if (rest === '' || !rest) {
+            str = `${convertNums(fd, lang)} ${langArr[30]}`
+        } else {
+            str = `${convertNums(fd, lang)} ${langArr[30]} ${rest}`
+        }
+        return str;
     }
 
     if (number >= 1000) {
@@ -106,15 +104,19 @@ function convertNums(number: number | string, lang?: string, op?: string): any {
         var arr = spirate(num);
         var res = '';
         // names
-        arr = arr.filter((thing) => thing !== '');
+        arr = arr.filter(thing => thing !== '');
         var getter = new getNames(arr, lang);
         for (var i = 0; i < arr.length; i++) {
             var nameOfTheNumber = getter.get();
             if (Number(arr[i]) != 0) {
-                res += convertNums(arr[i], lang || null) + ' ' + (nameOfTheNumber || '') + ' ';
+                if (nameOfTheNumber) {
+                    res += convertNums(arr[i], lang) + ' ' + nameOfTheNumber + ' ';
+                } else {
+                    res += convertNums(arr[i], lang);
+                }
             }
         }
-        return res.replace(/[ ]+/g, ' ');
+        return res;
     }
 }
 export default convertNums;

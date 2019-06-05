@@ -1,52 +1,35 @@
 import convertNums from './main/convertNums';
+import Options from './main/Options';
+import start from "./main/start";
 
-interface options {
-    numbers?: boolean,
-    numbersOnly?: boolean,
-    replaceNumbersOnly: boolean,
-    dates?: boolean,
-    datesOnly?: boolean,
-    binary?: boolean,
-    binaryOnly?: boolean,
-    lang?: string,
-    all?: boolean
+let options: Options = {
+    numbers: true,
+    numbersOnly: false,
+    lang: 'en'
 }
-// wt.default.lang = 'es'
-function convertToWords(toConvert: string | number, op?: options) {
-    var regexForNumbers = /[0-9]+/g;
-    var regexForBinary = /[0-1]+/g;
-    if(typeof toConvert === 'number'){
+
+function convertToWords(toConvert: string | number, op?: Options) {
+    if (typeof toConvert === 'number') {
         try {
-            var str = convertNums(toConvert, op.lang || null);
+            var str
+            if (op) {
+                str = convertNums(toConvert, op.lang);
+            } else {
+                str = convertNums(toConvert, options.lang);
+            }
             return str;
         } catch (err) {
             throw new Error("numbers Only should be passed in")
         }
     }
     if (op) {
-        if (op.numbersOnly) {
-            try {
-                var str = convertNums(toConvert, op.lang || null);
-                return str;
-            } catch (err) {
-                throw new Error("numbers Only should be passed in")
-            }
-        }
-        if (op.all) {
-            toConvert = String(toConvert);
-            console.log(op.lang);
-            toConvert = toConvert.replace(regexForNumbers, str => {
-                return convertNums(str, op.lang || null);
-            });
-        }
-    } else {
-        toConvert = String(toConvert);
-        toConvert = toConvert.replace(regexForNumbers, str => {
-            return convertNums(str);
-        });
+        return start(toConvert, op);
     }
-    return toConvert;
+    else {
+        return start(toConvert, options);
+    }
 }
+
 export default convertToWords;
-//@ts-ignore
 module.exports = convertToWords;
+module.exports.options = options;
