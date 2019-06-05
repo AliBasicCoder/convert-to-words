@@ -1,5 +1,5 @@
 # convert-to-words
-[![npm version](https://img.shields.io/static/v1.svg?label=npm%20version&message=1.2.8&color=green)](https://www.npmjs.com/package/convert-to-words)
+[![npm version](https://img.shields.io/static/v1.svg?label=npm%20version&message=1.2.9&color=green)](https://www.npmjs.com/package/convert-to-words)
 [![LICENSE](https://img.shields.io/static/v1.svg?label=LICENSE&message=MIT&color=green)](https://github.com/AliBasicCoder/convert-to-words/blob/master/LICENSE)
 
 [convert-to-words](https://github.com/AliBasicCoder/convert-to-words/) is a small javaScript TypeScript lib helps you to convert any number up
@@ -18,9 +18,13 @@ var text = convert('i was 20 yr old the last year');
 console.log(text); // outputs i was tewnty yr old the last year
 ```
 # installation
-npm
+## npm
 ```shell
 npm i convert-to-words
+```
+## cdn
+```
+https://cdn.jsdelivr.net/npm/convert-to-words@latest/index.js
 ```
 # options:
 
@@ -55,6 +59,7 @@ var res = convert('999.99');
 // console log it
 console.log(res); // outputs novecientos noveta y nueve comma novecientos noveta y nueve
 ```
+
 # LICENCE
 MIT License
 
