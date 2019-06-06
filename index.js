@@ -1,56 +1,56 @@
 var module = module || {};
 var exports = exports || {};
 module.exports =
- (function (modules, runtime) { // webpackBootstrap
- 	"use strict";
- 	// The module cache
- 	var installedModules = {};
-
- 	// The require function
- 	function __webpack_require__(moduleId) {
-
- 		// Check if module is in cache
- 		if (installedModules[moduleId]) {
- 			return installedModules[moduleId].exports;
-                
+/******/ (function (modules, runtime) { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if (installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+                /******/
             }
- 		// Create a new module (and put it into the cache)
- 		var module = installedModules[moduleId] = {
- 			i: moduleId,
- 			l: false,
- 			exports: {}
-                
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+                /******/
             };
-
- 		// Execute the module function
- 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
- 		// Flag the module as loaded
- 		module.l = true;
-
- 		// Return the exports of the module
- 		return module.exports;
-            
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+            /******/
         }
-
-
-
- 	// the startup function
- 	function startup() {
- 		// Load entry module and return exports
- 		return __webpack_require__(200);
-            
+/******/
+/******/
+/******/
+/******/ 	// the startup function
+/******/ 	function startup() {
+/******/ 		// Load entry module and return exports
+/******/ 		return __webpack_require__(200);
+            /******/
         };
-
- 	// run startup
- 	return startup();
-        
+/******/
+/******/ 	// run startup
+/******/ 	return startup();
+        /******/
     })
+/************************************************************************/
+/******/({
 
-({
-
- 6:
- (function (__unusedmodule, exports, __webpack_require__) {
+/***/ 6:
+/***/ (function (__unusedmodule, exports, __webpack_require__) {
 
                 "use strict";
 
@@ -226,11 +226,11 @@ module.exports =
                 exports.default = convertNumES;
 
 
-                
+                /***/
             }),
 
- 145:
- (function (__unusedmodule, exports, __webpack_require__) {
+/***/ 145:
+/***/ (function (__unusedmodule, exports, __webpack_require__) {
 
                 "use strict";
 
@@ -240,7 +240,7 @@ module.exports =
                 Object.defineProperty(exports, "__esModule", { value: true });
                 var convertNums_1 = __importDefault(__webpack_require__(218));
                 function start(toConvert, op) {
-                    var regexForNumbers = /[0-9]+/g; // /[0-9]+[^stndth]/g;
+                    var regexForNumbers = /[0-9]+(\.[0-9]+)?/g; // /[0-9]+[^stndth]/g;
                     // var regexForOrdinal = /[0-9]+[stndth]{2}/g;
                     if (op.numbersOnly) {
                         try {
@@ -285,11 +285,11 @@ module.exports =
                 exports.default = start;
 
 
-                
+                /***/
             }),
 
- 200:
- (function (module, exports, __webpack_require__) {
+/***/ 200:
+/***/ (function (module, exports, __webpack_require__) {
 
                 "use strict";
 
@@ -332,11 +332,11 @@ module.exports =
                 module.exports.options = options;
 
 
-                
+                /***/
             }),
 
- 218:
- (function (__unusedmodule, exports, __webpack_require__) {
+/***/ 218:
+/***/ (function (__unusedmodule, exports, __webpack_require__) {
 
                 "use strict";
 
@@ -495,11 +495,11 @@ module.exports =
                 exports.default = convertNums;
 
 
-                
+                /***/
             }),
 
- 309:
- (function (__unusedmodule, exports) {
+/***/ 309:
+/***/ (function (__unusedmodule, exports) {
 
                 "use strict";
 
@@ -555,11 +555,11 @@ module.exports =
                 exports.default = Spanish;
 
 
-                
+                /***/
             }),
 
- 365:
- (function (__unusedmodule, exports) {
+/***/ 365:
+/***/ (function (__unusedmodule, exports) {
 
                 "use strict";
 
@@ -600,11 +600,11 @@ module.exports =
                 exports.default = English;
 
 
-                
+                /***/
             }),
 
- 517:
- (function (__unusedmodule, exports) {
+/***/ 517:
+/***/ (function (__unusedmodule, exports) {
 
                 "use strict";
 
@@ -619,11 +619,11 @@ module.exports =
                 exports.default = swapStr;
 
 
-                
+                /***/
             }),
 
- 555:
- (function (__unusedmodule, exports) {
+/***/ 555:
+/***/ (function (__unusedmodule, exports) {
 
                 "use strict";
 
@@ -727,11 +727,11 @@ module.exports =
                 exports.default = BigEnglish;
 
 
-                
+                /***/
             }),
 
- 572:
- (function (__unusedmodule, exports, __webpack_require__) {
+/***/ 572:
+/***/ (function (__unusedmodule, exports, __webpack_require__) {
 
                 "use strict";
 
@@ -757,11 +757,11 @@ module.exports =
                 exports.default = spirate;
 
 
-                
+                /***/
             }),
 
- 666:
- (function (__unusedmodule, exports, __webpack_require__) {
+/***/ 666:
+/***/ (function (__unusedmodule, exports, __webpack_require__) {
 
                 "use strict";
 
@@ -794,11 +794,11 @@ module.exports =
                 exports.default = getNames;
 
 
-                
+                /***/
             }),
 
- 728:
- (function (__unusedmodule, exports, __webpack_require__) {
+/***/ 728:
+/***/ (function (__unusedmodule, exports, __webpack_require__) {
 
                 "use strict";
 
@@ -833,11 +833,11 @@ module.exports =
                 exports.default = swithToZeors;
 
 
-                
+                /***/
             }),
 
- 964:
- (function (__unusedmodule, exports) {
+/***/ 964:
+/***/ (function (__unusedmodule, exports) {
 
                 "use strict";
 
@@ -941,9 +941,9 @@ module.exports =
                 exports.default = Spanish;
 
 
-                
+                /***/
             })
 
-        
+        /******/
     });
 var convertToWords = module.exports;

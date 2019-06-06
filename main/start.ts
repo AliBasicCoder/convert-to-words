@@ -3,7 +3,7 @@ import convertNums from './convertNums';
 import Options from "./Options";
 
 function start(toConvert: string, op: Options) {
-    var regexForNumbers = /[0-9]+/g; // /[0-9]+[^stndth]/g;
+    var regexForNumbers = /[0-9]+(\.[0-9]+)?/g; // /[0-9]+[^stndth]/g;
     // var regexForOrdinal = /[0-9]+[stndth]{2}/g;
     if (op.numbersOnly) {
         try {
