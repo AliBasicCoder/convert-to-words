@@ -1,6 +1,8 @@
 # convert-to-words
-[![npm version](https://img.shields.io/static/v1.svg?label=npm%20version&message=1.3.0&color=green)](https://www.npmjs.com/package/convert-to-words)
-[![LICENSE](https://img.shields.io/static/v1.svg?label=LICENSE&message=MIT&color=green)](https://github.com/AliBasicCoder/convert-to-words/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/fs-pro.svg)](https://www.npmjs.com/package/convert-to-words)
+[![GitHub](https://img.shields.io/github/license/AliBasicCoder/convert-to-words.svg)](https://github.com/AliBasicCoder/convert-to-words/)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/convert-to-words.svg?style=plastic)](https://bundlephobia.com/result?p=convert-to-words@latest)
+[![npm](https://img.shields.io/npm/dm/convert-to-words.svg)](https://www.npmjs.com/package/fs-pro)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAliBasicCoder%2Fconvert-to-words.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2FAliBasicCoder%2Fconvert-to-words?ref=badge_small)
 
 [convert-to-words](https://github.com/AliBasicCoder/convert-to-words/) is a small javaScript TypeScript lib helps you to convert any number up
