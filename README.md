@@ -1,5 +1,5 @@
 # convert-to-words
-[![npm](https://img.shields.io/npm/v/convert-to-word.svg)](https://www.npmjs.com/package/convert-to-words)
+[![npm](https://img.shields.io/npm/v/convert-to-words.svg)](https://www.npmjs.com/package/convert-to-words)
 [![GitHub](https://img.shields.io/github/license/AliBasicCoder/convert-to-words.svg)](https://github.com/AliBasicCoder/convert-to-words/)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/convert-to-words.svg?style=plastic)](https://bundlephobia.com/result?p=convert-to-words@latest)
 [![npm](https://img.shields.io/npm/dm/convert-to-words.svg)](https://www.npmjs.com/package/convert-to-words)
