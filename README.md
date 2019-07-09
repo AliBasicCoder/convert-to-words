@@ -1,6 +1,7 @@
 # convert-to-words
 [![npm version](https://img.shields.io/static/v1.svg?label=npm%20version&message=1.3.0&color=green)](https://www.npmjs.com/package/convert-to-words)
 [![LICENSE](https://img.shields.io/static/v1.svg?label=LICENSE&message=MIT&color=green)](https://github.com/AliBasicCoder/convert-to-words/blob/master/LICENSE)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAliBasicCoder%2Fconvert-to-words.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAliBasicCoder%2Fconvert-to-words?ref=badge_shield)
 
 [convert-to-words](https://github.com/AliBasicCoder/convert-to-words/) is a small javaScript TypeScript lib helps you to convert any number up
 to 10^300 and also covers deciamal numbers and
@@ -82,3 +83,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAliBasicCoder%2Fconvert-to-words.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FAliBasicCoder%2Fconvert-to-words?ref=badge_large)
