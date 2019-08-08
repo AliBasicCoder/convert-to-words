@@ -2,34 +2,26 @@ import convertNums from './main/convertNums';
 import Options from './main/Options';
 import start from "./main/start";
 
-let options: Options = {
+const options: Options = {
     numbers: true,
     numbersOnly: false,
     lang: 'en'
 }
 
-function convertToWords(toConvert: string | number, op?: Options) {
+const convertToWords = (toConvert: string | number, op?: Options) => {
     if (typeof toConvert === 'number') {
         try {
-            var str
-            if (op) {
-                str = convertNums(toConvert, op.lang);
-            } else {
-                str = convertNums(toConvert, options.lang);
-            }
+            const lang = op.lang || options.lang;
+
+            const str = convertNums(toConvert, lang);
+
             return str;
         } catch (err) {
-            throw new Error("numbers Only should be passed in")
+            throw err;
         }
     }
-    if (op) {
-        return start(toConvert, op);
-    }
-    else {
-        return start(toConvert, options);
-    }
+    return start(op || options);
 }
 
-export default convertToWords;
 module.exports = convertToWords;
 module.exports.options = options;

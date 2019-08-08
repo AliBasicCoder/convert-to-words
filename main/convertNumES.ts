@@ -3,12 +3,13 @@ import getNames from "../src/getNames";
 import spirate from "../src/spirate";
 import swithToZeors from '../src/swithToZeros';
 
+
 function convertNumES(number: any, op?: any): String {
     var langArr = Spanish;
     if (op === 'dec') {
         var res = '';
         number = String(number);
-        var regex = /^(0{1,100000000000000})([0-9]+)$/;
+        var regex = /^(0+)([0-9]+)$/;
         var test: any = number.match(regex);
         if (regex.test(number)) {
             for (var i = 0; i < test[1].length; i++) {
@@ -78,7 +79,7 @@ function convertNumES(number: any, op?: any): String {
         var arr = spirate(num);
         var res = '';
         // names
-        arr = arr.filter((thing) => thing !== '');
+        arr = arr.filter(thing => thing !== '');
         var getter = new getNames(arr, 'es');
         for (var i = 0; i < arr.length; i++) {
             var nameOfTheNumber = getter.get();
