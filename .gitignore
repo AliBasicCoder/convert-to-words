@@ -1,5 +1,5 @@
-node_modules
-out
-.vscode
-minify.js
+node_modules/
+out/
+.vscode/
+*.js
 package-lock.json

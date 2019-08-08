@@ -28,7 +28,7 @@ npm i convert-to-words
 ```
 ## cdn
 ```
-https://cdn.jsdelivr.net/npm/convert-to-words@1.3.1/index.js
+https://cdn.jsdelivr.net/npm/convert-to-words@1.3.2/index.js
 ```
 # options:
 
