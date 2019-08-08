@@ -41,16 +41,15 @@ https://cdn.jsdelivr.net/npm/convert-to-words@1.3.2/index.js
 ## examples:
 ```js
 // bring it
-const convert = require('convert-to-words');
+// this will run on both browser and node
+const convertToWords = convertToWords || require('convert-to-words');
 // use it
-var res = convert(999.999,{lang:'es'});
+const res = convertToWords(999.999, {lang:'es'});
 // console log it
 console.log(res); // outputs novecientos noveta y nueve comma novecientos noveta y nueve
 ```
 also you can change the default of the function
 ```js
-// bring it
-const convert = require('convert-to-words');
 // changing the default lang
 convert.options.lang = 'es';
 
@@ -59,7 +58,7 @@ convert.options.lang = 'es';
 convert.options.numberOnly = true;
 
 // getting the res
-var res = convert('999.99');
+const res = convert('999.99');
 // console log it
 console.log(res); // outputs novecientos noveta y nueve comma novecientos noveta y nueve
 ```
