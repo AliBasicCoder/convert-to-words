@@ -1,4 +1,4 @@
-import { convertNums } from './convertNums';
+import { convertNums } from "./convertNums";
 import { Options } from "./Options";
 
 export const start = (toConvert: string, op: Options) => {
@@ -6,21 +6,18 @@ export const start = (toConvert: string, op: Options) => {
 
     if (op.numbersOnly) {
         try {
-            const str = convertNums(toConvert, op.lang)
+            const str = convertNums(toConvert, op.lang);
             return str;
         } catch (err) {
-            throw new Error("numbers Only should be passed in")
+            throw new Error("numbers Only should be passed in");
         }
     }
 
     // numbers
-    if (op.replaceNumbersOnly) {
-        toConvert = toConvert.replace(
-            regexForNumbers,
-            str => convertNums(str, op.lang)
-        );
-        return toConvert;
-    }
+    toConvert = toConvert.replace(
+        regexForNumbers,
+        str => convertNums(str, op.lang)
+    );
+    return toConvert;
 
-    return "";
 };

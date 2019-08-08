@@ -1,3 +1,9 @@
-out
-minify.js
+BigNumsArrs/
+langArrs/
+main/
+src/
+out/
+tslint.json
+tsconfig.json
+*.ts
 .vscode
