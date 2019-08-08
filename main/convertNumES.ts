@@ -1,10 +1,10 @@
 import { Spanish } from "../langArrs/spainshNumArr";
 import { getNames } from "../src/getNames";
 import { isBetween } from "../src/isBetween";
-import spirate from "../src/spirate";
-import switchToZeros from "../src/swithToZeros";
+import { spirate } from "../src/spirate";
+import { switchToZeros } from "../src/switchToZeros";
 
-function convertNumES(number: any, op?: any): String {
+function convertNumES(number: any, op?: any): string {
     const langArr = Spanish;
 
     if (op === "dec") {

@@ -1,4 +1,4 @@
-import BigEnglish from "../BigNumsArrs/english";
+import { BigEnglish } from "../BigNumsArrs/english";
 import { Spanish } from "../BigNumsArrs/spanish";
 
 // tslint:disable-next-line:class-name

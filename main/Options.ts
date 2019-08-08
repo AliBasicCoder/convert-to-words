@@ -1,5 +1,5 @@
-// tslint:disable-next-line: interface-name
-interface Options {
+
+export interface Options {
     // numbers
     numbers?: boolean;
     numbersOnly?: boolean;
@@ -8,7 +8,7 @@ interface Options {
     dates?: boolean;
     datesOnly?: boolean;
     replaceDatesOnly?: boolean;
-    // bianry
+    // binary
     binary?: boolean;
     binaryOnly?: boolean;
     replaceBinaryOnly?: boolean;
@@ -21,5 +21,3 @@ interface Options {
     // all
     all?: boolean;
 }
-
-export default Options;
