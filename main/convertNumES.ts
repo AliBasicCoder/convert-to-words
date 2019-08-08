@@ -4,7 +4,7 @@ import { isBetween } from "../src/isBetween";
 import { spirate } from "../src/spirate";
 import { switchToZeros } from "../src/switchToZeros";
 
-function convertNumES(number: any, op?: any): string {
+export const convertNumES = (number: any, op?: any): string => {
     const langArr = Spanish;
 
     if (op === "dec") {
@@ -94,5 +94,4 @@ function convertNumES(number: any, op?: any): string {
         return str.replace(/[ ]+/g, " ");
     }
     return "";
-}
-export default convertNumES;
+};

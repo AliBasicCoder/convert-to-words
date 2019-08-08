@@ -2,7 +2,7 @@ import { getNames } from "../src/getNames";
 import { spirate } from "../src/spirate";
 import { switchToZeros } from "../src/switchToZeros";
 import { English } from "../langArrs/englishNumArr";
-import convertNumES from "./convertNumES";
+import { convertNumES } from "./convertNumES";
 import { isBetween } from "../src/isBetween";
 
 export const convertNums = (number: number | string, lang?: string, op?: string): any => {
