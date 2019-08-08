@@ -1,6 +1,5 @@
 import { swapStr } from "./swapStr";
 
-
 export const switchToZeros = (__numberRes: any) => {
     let numberRes: any = String(__numberRes);
     const regex = /e\+([0-9]{2,3})/;
