@@ -1,30 +1,29 @@
-import Spanish from "../langArrs/spainshNumArr";
-import getNames from "../src/getNames";
-import spirate from "../src/spirate";
-import swithToZeors from '../src/swithToZeros';
+import { Spanish } from "../langArrs/spainshNumArr";
+import { getNames } from "../src/getNames";
 import { isBetween } from "../src/isBetween";
+import spirate from "../src/spirate";
+import switchToZeros from "../src/swithToZeros";
 
 function convertNumES(number: any, op?: any): String {
     const langArr = Spanish;
 
-    if (op === 'dec') {
-        var res = '';
+    if (op === "dec") {
+        let res = "";
         number = String(number);
-        var regex = /^(0+)([0-9]+)$/;
-        var test: any = number.match(regex);
+        const regex = /^(0+)([0-9]+)$/;
+        const test: any = number.match(regex);
         if (regex.test(number)) {
-            for (var i = 0; i < test[1].length; i++) {
+            for (const t of test[1]) {
                 res += ` zero`;
             }
             res += " " + convertNumES(test[2]);
-            return res.replace(/[ ]+/g, ' ');
-        }
-        else {
+            return res.replace(/[ ]+/g, " ");
+        } else {
             return convertNumES(number);
         }
     }
 
-    if (isBetween(Number(number), 0, 999)) number = Number(number);
+    if (isBetween(Number(number), 0, 999)) { number = Number(number); }
 
     if (isBetween(number, 0, 30)) {
         return langArr[number];
@@ -46,23 +45,23 @@ function convertNumES(number: any, op?: any): String {
     }
 
     if (number >= 1000) {
-        // cheking if e exits
+        // cheeking if e exits
         let num = String(number);
-        if (String(number).indexOf('e') != -1) {
-            num = swithToZeors(number);
+        if (String(number).indexOf("e") !== -1) {
+            num = switchToZeros(number);
         }
         let arr = spirate(num);
-        let res = '';
+        let res = "";
         // names
-        arr = arr.filter(thing => thing !== '');
-        const getter = new getNames(arr, 'es');
-        for (let i = 0; i < arr.length; i++) {
-            let nameOfTheNumber = getter.get();
-            if (Number(arr[i]) != 0) {
-                res += convertNumES(arr[i]) + ' ' + (nameOfTheNumber || '') + ' ';
+        arr = arr.filter((thing) => thing !== "");
+        const getter = new getNames(arr, "es");
+        for (const item of arr) {
+            const nameOfTheNumber = getter.get();
+            if (Number(item) !== 0) {
+                res += convertNumES(item) + " " + (nameOfTheNumber || "") + " ";
             }
         }
-        return res.replace(/[ ]+/g, ' ');
+        return res.replace(/[ ]+/g, " ");
     }
 
     if (isBetween(number, 31, 99) && Number.isInteger(number)) {
@@ -70,7 +69,7 @@ function convertNumES(number: any, op?: any): String {
         const fd = Math.floor(number / 10);
         const sd = (number - (fd * 10));
         const str: string = ` ${convertNumES(fd * 10)} y ${convertNumES(sd)}`;
-        return str.replace(/[ ]+/g, ' ');
+        return str.replace(/[ ]+/g, " ");
     }
 
     if (isBetween(number, 100, 999) && Number.isInteger(Number(number))) {
@@ -78,12 +77,12 @@ function convertNumES(number: any, op?: any): String {
         const fd = Math.floor(number / 100);
         let rest: any = (number - (fd * 100));
         if (rest === 0) {
-            rest = '';
+            rest = "";
         } else {
-            rest = convertNumES(rest)
+            rest = convertNumES(rest);
         }
-        const str: string = `${convertNumES(fd * 100)} ${rest}`
-        return str.replace(/[ ]+/, ' ');
+        const str: string = `${convertNumES(fd * 100)} ${rest}`;
+        return str.replace(/[ ]+/, " ");
     }
 
     if (!Number.isInteger(number)) {
@@ -91,9 +90,9 @@ function convertNumES(number: any, op?: any): String {
         const index = num.indexOf(".");
         const dec = num.substring(index + 1, num.length);
         const int = num.substring(0, index);
-        const str: string = `${convertNumES(int)} comma ${convertNumES(dec, 'dec')}`;
-        return str.replace(/[ ]+/g, ' ');
+        const str: string = `${convertNumES(int)} comma ${convertNumES(dec, "dec")}`;
+        return str.replace(/[ ]+/g, " ");
     }
-    return '';
+    return "";
 }
 export default convertNumES;

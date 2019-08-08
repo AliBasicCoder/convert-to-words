@@ -1,23 +1,25 @@
+// tslint:disable-next-line: interface-name
 interface Options {
     // numbers
-    numbers?: boolean,
-    numbersOnly?: boolean,
-    replaceNumbersOnly?: boolean,
+    numbers?: boolean;
+    numbersOnly?: boolean;
+    replaceNumbersOnly?: boolean;
     // dates
-    dates?: boolean,
-    datesOnly?: boolean,
-    replaceDatesOnly?: boolean,
+    dates?: boolean;
+    datesOnly?: boolean;
+    replaceDatesOnly?: boolean;
     // bianry
-    binary?: boolean,
-    binaryOnly?: boolean,
-    replaceBinaryOnly?: boolean,
+    binary?: boolean;
+    binaryOnly?: boolean;
+    replaceBinaryOnly?: boolean;
     // ordinal
-    ordinal?: boolean,
-    ordinalOnly?: boolean,
-    replaceOrdinalOnly?: boolean,
+    ordinal?: boolean;
+    ordinalOnly?: boolean;
+    replaceOrdinalOnly?: boolean;
     // lang
-    lang?: string,
+    lang?: string;
     // all
-    all?: boolean
+    all?: boolean;
 }
-export default Options
+
+export default Options;
