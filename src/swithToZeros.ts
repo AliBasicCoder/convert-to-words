@@ -1,25 +1,28 @@
-import swapStr from './swapStr';
-function swithToZeors(number: any) {
-    var number: any = String(number);
-    var regex = /e\+([0-9]{2,3})/;
-    if (!regex.test(number)) return number;
-    var res = number.match(regex);
-    var numRegex = /([0-9]* )(\.e\+[0-9]{2,3})/;
-    var num = number.substring(0, res['index']);
+import swapStr from "./swapStr";
+
+// tslint:disable-next-line:variable-name
+function switchToZeros(__numberRes: any) {
+    let numberRes: any = String(__numberRes);
+    const regex = /e\+([0-9]{2,3})/;
+    if (!regex.test(numberRes)) { return numberRes; }
+    const res = numberRes.match(regex);
+    const numRegex = /([0-9]* )(\.e\+[0-9]{2,3})/;
+    let num = numberRes.substring(0, res.index);
     for (let i = Number(res[1]); i > 0; i--) {
 
-        if (number.indexOf(".") != -1 && !(numRegex.test(number))) {
-            var index = number.indexOf(".");
-            number = swapStr(number, index, index + 1);
-            number = number.substring(0, res['index']);
-            number += `e+${i}`;
+        if (numberRes.indexOf(".") !== -1 && !(numRegex.test(numberRes))) {
+            const index = numberRes.indexOf(".");
+            numberRes = swapStr(numberRes, index, index + 1);
+            numberRes = numberRes.substring(0, res.index);
+            numberRes += `e+${i}`;
         }
-        if (numRegex.test(number)) {
+        if (numRegex.test(numberRes)) {
             for (let y = i; i <= y; y--) {
-                num += '0';
+                num += "0";
             }
         }
     }
-    return num.replace(".", '');
+    return num.replace(".", "");
 }
-export default swithToZeors;
+
+export default switchToZeros;

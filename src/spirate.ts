@@ -1,8 +1,8 @@
-import swapStr from './swapStr';
+import swapStr from "./swapStr";
 function spirate(num: any) {
-    var arr = [];
+    const arr = [];
     for (let i = num.length - 1; i >= 0; i = i - 3) {
-        var str = num[i] + (num[i - 1] || '') + (num[i - 2] || '');
+        let str = num[i] + (num[i - 1] || "") + (num[i - 2] || "");
         if (str.length === 2) {
             str = swapStr(str, 1, 0);
         }

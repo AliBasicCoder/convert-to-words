@@ -1,17 +1,19 @@
-import convertNums from './main/convertNums';
-import Options from './main/Options';
+import convertNums from "./main/convertNums";
+import Options from "./main/Options";
 import start from "./main/start";
+
+// tslint:disable: object-literal-sort-keys
 
 const options: Options = {
     numbers: true,
     numbersOnly: false,
-    lang: 'en'
-}
+    lang: "en",
+};
 
 const convertToWords = (toConvert: string | number, op?: Options) => {
-    if (typeof toConvert === 'number') {
+    if (typeof toConvert === "number") {
         try {
-            const lang = op.lang || options.lang;
+            const lang = (op ? op.lang : null) || options.lang;
 
             const str = convertNums(toConvert, lang);
 
@@ -20,8 +22,8 @@ const convertToWords = (toConvert: string | number, op?: Options) => {
             throw err;
         }
     }
-    return start(op || options);
-}
+    return start(toConvert, op || options);
+};
 
 module.exports = convertToWords;
 module.exports.options = options;
