@@ -1,4 +1,4 @@
-import swapStr from "./swapStr";
+import { swapStr } from "./swapStr";
 
 export const spirate = (num: any) => {
     const arr = [];

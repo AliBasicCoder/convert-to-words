@@ -1,6 +1,6 @@
-import convertNums from "./main/convertNums";
-import Options from "./main/Options";
-import start from "./main/start";
+import { convertNums } from "./main/convertNums";
+import { Options } from "./main/Options";
+import { start } from "./main/start";
 
 // tslint:disable: object-literal-sort-keys
 

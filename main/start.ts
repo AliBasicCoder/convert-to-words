@@ -1,8 +1,7 @@
-import convertNums from './convertNums';
-import Options from "./Options";
-//// import ordinal from "./ordinal";
+import { convertNums } from './convertNums';
+import { Options } from "./Options";
 
-function start(toConvert: string, op: Options) {
+export const start = (toConvert: string, op: Options) => {
     const regexForNumbers = /[0-9]+(\.[0-9]+)?/g;
 
     if (op.numbersOnly) {
@@ -22,26 +21,6 @@ function start(toConvert: string, op: Options) {
         );
         return toConvert;
     }
-    //// ordinals
-    //// const regexForOrdinal = /[0-9]+[stndth]{2}/g;
-
-    //// if (op.replaceOrdinalOnly) {
-    ////     toConvert = toConvert.replace(
-    ////        regexForOrdinal,
-    ////        str => ordinal(str, op.lang)
-    ////    )
-    ////     return toConvert;
-    //// }
-
-    //// if (op.ordinalOnly) {
-    ////     try {
-    ////         const str: string = ordinal(toConvert, op.lang);
-    ////         return str;
-    ////     } catch (e) {
-    ////         throw new Error('ordinal only should be past in')
-    ////     }
-    //// }
 
     return "";
-}
-export default start;
+};

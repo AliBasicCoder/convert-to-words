@@ -9,7 +9,9 @@
         "variable-name": false,
         "ordered-imports": false,
         "no-trailing-whitespace": false,
-        "interface-name": false
+        "interface-name": false,
+        "arrow-parens": false,
+        "trailing-comma": false
     },
     "rulesDirectory": []
 }
