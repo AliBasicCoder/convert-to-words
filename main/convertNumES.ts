@@ -29,21 +29,17 @@ function convertNumES(number: any, op?: any): String {
         return langArr[number];
     }
 
-    if (number === 40) return langArr[31];
-    if (number === 50) return langArr[32];
-    if (number === 60) return langArr[33];
-    if (number === 70) return langArr[34];
-    if (number === 80) return langArr[35];
-    if (number === 90) return langArr[36];
-    if (number === 100) return langArr[37];
-    if (number === 200) return langArr[38];
-    if (number === 300) return langArr[39];
-    if (number === 400) return langArr[40];
-    if (number === 500) return langArr[41];
-    if (number === 600) return langArr[42];
-    if (number === 700) return langArr[43];
-    if (number === 800) return langArr[44];
-    if (number === 900) return langArr[45];
+    if (isBetween(number, 31, 900) && number % 10 === 0) {
+        let fact = 10;
+        let index = 30;
+        for (let i = 30; i < 900; i += fact) {
+            index++;
+            if (i === 90) {
+                fact = 100;
+            }
+        }
+        return langArr[index];
+    }
 
     if (number >= 1000) {
         // cheking if e exits
